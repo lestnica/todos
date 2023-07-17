@@ -48,12 +48,13 @@ func (s *Service) GetTodo() []string {
 
 func (s *Service) RunTodoCLI() {
 	for {
+
+		choice := InputReading("Choose action: ")
+
 		fmt.Println("1. Add TODO")
 		fmt.Println("2. Remove TODO")
 		fmt.Println("3. Get TODOs")
 		fmt.Println("4. Exit")
-
-		choice := InputReading("Choose action: ")
 
 		switch choice {
 		case "1":
